@@ -1,0 +1,1 @@
+eksctl create cluster --name my-cluster --region eu-north-1 --fargate 

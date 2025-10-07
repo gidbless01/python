@@ -1,0 +1,22 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: my-cluster
+  region: eu-north-1
+
+fargateProfiles:
+  - name: default
+    selectors:
+      - namespace: default
+
+nodeGroups:
+  - name: linux-nodes
+    instanceType: t3.medium
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 4
+    managed: true
+
+
+    
